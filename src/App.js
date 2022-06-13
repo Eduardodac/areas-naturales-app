@@ -11,7 +11,7 @@ import theme from './theme/theme';
 import Bar from './components/navegacion/Bar';
 
 function App() {
-  return (
+  return ( 
     <React.Fragment>
       <Router>
         <ThemProvider theme = {theme}>

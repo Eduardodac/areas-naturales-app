@@ -1,24 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import ThemProvider from "@mui/material/styles/ThemeProvider"
+import { Grid } from "@mui/material"
+import Inicio from './components/navegacion/Inicio';
+import Analisis from './components/navegacion/Analisis';
+import Galeria from './components/navegacion/Galeria';
+import Rutas from './components/navegacion/Rutas';
+import theme from './theme/theme';
+import Bar from './components/navegacion/Bar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Router>
+        <ThemProvider theme = {theme}>
+          {<Bar />}
+          <Grid container>
+            <Routes>
+              <Route path="/" element={<Inicio />} />
+              <Route path="/Analisis" element={<Analisis />} />
+              <Route path="/Galerias" element={<Galeria />} />
+              <Route path="/Rutas" element={<Rutas />} />
+            </Routes>
+          </Grid>
+        </ThemProvider>
+
+      </Router>
+
+    </React.Fragment>
   );
 }
 

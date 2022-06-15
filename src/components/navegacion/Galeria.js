@@ -27,7 +27,7 @@ export default function BasicSelect() {
 
   return (
     <Container  sx={{ minWidth: 120, margin: "20px 20px" }}>
-      <FormControl fullWidth>
+      <FormControl  sx={{width : "50%"}}>
         <InputLabel id="demo-simple-select-label">Rutas</InputLabel>
         <Select
           labelId="demo-simple-select-label"

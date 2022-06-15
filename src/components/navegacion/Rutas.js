@@ -4,22 +4,26 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { Avatar, Container, Grid } from "@mui/material";
+import ruta_baltica from "../../assets/rutas/ruta_baltica.jpg"
+import ruta_panam from "../../assets/rutas/ruta_panam.jpg"
+import ruta_mexpue from "../../assets/rutas/ruta_mexpue.jpg"
 
 
 export default function Rutas() {
+
   const [Ruta, setRuta] = useState(10);
   const [rutaImg, setRutaImg] = useState(
-    "/static/media/ruta_panam.e2479e384efff89af173.jpg"
+    ruta_baltica
   );
 
   useEffect(() => {
     //console.log(ruta_mexpue);
     if (Ruta === 10) {
-      setRutaImg("/static/media/ruta_panam.e2479e384efff89af173.jpg");
+      setRutaImg(ruta_panam);
     } else if (Ruta === 20) {
-      setRutaImg("/static/media/ruta_baltica.afe84d63fd8510c48c9c.jpg");
+      setRutaImg(ruta_baltica);
     } else {
-      setRutaImg("/static/media/ruta_mexpue.2556d89c629e1f3c9547.jpg");
+      setRutaImg(ruta_mexpue);
     }
   }, [Ruta]);
 

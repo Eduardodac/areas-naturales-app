@@ -14,7 +14,7 @@ const Inicio = () => {
                     Nuestro Proyecto
                 </Typography>
                 <Grid container justifyContent="flex-start" >
-                    <Grid item xs={12} md={6} sx={{/*backgroundColor :"blue",*/ padding : "10px"}}>
+                    <Grid item xs={12} md={6} sx={{/*backgroundColor :"blue",*/ padding : "10px"}} >
                         <Typography component ="h4" variant ="body1">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                             Mauris in varius orci. Morbi condimentum scelerisque mattis. 
@@ -27,7 +27,7 @@ const Inicio = () => {
                         </Typography>
                     </Grid>
                     <Grid item xs={12} md={5} sx={{/*backgroundColor :"red",*/ marginLeft:"20px"}} justifyContent="Center">
-                        <img src= {mapa} width="100%" height="100%"/>
+                        <Avatar src= {mapa} sx = {{width: "100%", height: "100%"}} variant= "square"/>
                     </Grid>
                 </Grid>
             </Box>

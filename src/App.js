@@ -9,7 +9,7 @@ import Galeria from './components/navegacion/Galeria';
 import Rutas from './components/navegacion/Rutas';
 import theme from './theme/theme';
 import Bar from './components/navegacion/Bar';
-import Galeria1 from './components/navegacion/galerias/Galeria1';
+import EstructuraAnalisis from './components/navegacion/analisis/EstructuraAnalisis';
 
 function App() {
   return ( 
@@ -23,7 +23,7 @@ function App() {
               <Route path="/Analisis" element={<Analisis />} />
               <Route path="/Galerias" element={<Galeria />} />
               <Route path="/Rutas" element={<Rutas />} />
-              <Route path="/Galeria1" element={<Galeria1 />} />
+              <Route path="/ana/analisis" element={<EstructuraAnalisis />} />
             </Routes>
           </Grid>
         </ThemProvider>

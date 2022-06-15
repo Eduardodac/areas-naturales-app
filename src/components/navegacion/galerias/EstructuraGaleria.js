@@ -22,7 +22,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 // console.log(img16);
 
 
-export default function Galeria1(props) {
+export default function EstructuraGaleria(props) {
 
     const smW = useMediaQuery('(min-width:600px)');
     const mdW = useMediaQuery('(min-width:900px)');

@@ -3,53 +3,53 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-import { Avatar, Container, Grid, Typography } from "@mui/material";
+import EstructuraAnalisis from "./analisis/EstructuraAnalisis";
+import { Box } from "@mui/system";
+import mapa1 from "../../assets/analisis/Mapa1.png";
+import mapa2 from "../../assets/analisis/Mapa2.png";
+import pastel1 from "../../assets/analisis/pastel1.png";
+import pastel2 from "../../assets/analisis/pastel2.png";
+import nubePalabras1 from "../../assets/analisis/nubePalabras1.png";
+import nubePalabras2 from "../../assets/analisis/nubePalabras2.png";
 
-
-export default function Rutas() {
-  
-  const [Ruta, setRuta] = useState(10);
-  const [rutaImg, setRutaImg] = useState("/static/media/ruta_panam.e2479e384efff89af173.jpg");
+export default function Analisis() {
+  const [analisis, setAnalisis] = useState(10);
+  const [mapa, setMapa] = useState(mapa1);
+  const [pastel, setPastel] = useState(pastel1);
+  const [nubePalabras, setNubePalabras] = useState(nubePalabras1);
 
   useEffect(() => {
-    //console.log(ruta_mexpue);
-    if (Ruta === 10) {
-      setRutaImg("/static/media/ruta_panam.e2479e384efff89af173.jpg");
-    } else if (Ruta === 20) {
-      setRutaImg("/static/media/ruta_baltica.afe84d63fd8510c48c9c.jpg");
+    if (analisis === 10) {
+      setMapa(mapa1);
+      setPastel(pastel1);
+      setNubePalabras(nubePalabras1);
     } else {
-      setRutaImg("/static/media/ruta_mexpue.2556d89c629e1f3c9547.jpg");
+      setMapa(mapa2);
+      setPastel(pastel2);
+      setNubePalabras(nubePalabras2);
     }
-  }, [Ruta]);
+  }, [analisis]);
 
-  const cambiarRuta = (event) => {
-    setRuta(event.target.value);
+  const cambiarAnalisis = (event) => {
+    setAnalisis(event.target.value);
   };
 
   return (
-    <Container
-      component="main"
-      
-      sx={{ minWidth: 120, marginTop: "20px"}}
-    >
-      <Grid container sx={{padding : "10px"}}>
-        <FormControl sx={{width : "50%"}}>
-          <InputLabel id="demo-simple-select-label">Rutas</InputLabel>
-          <Select
-            labelId="demo-simple-select-label"
-            id="demo-simple-select"
-            value={Ruta}
-            label="Rutas"
-            onChange={cambiarRuta}
-          >
-            <MenuItem value={10}>Ruta Panamericana</MenuItem>
-            <MenuItem value={20}>Ruta Báltica</MenuItem>
-            <MenuItem value={30}>Ruta México Puebla</MenuItem>
-          </Select>
-        </FormControl>
-      </Grid>
-      <Typography>{Ruta}</Typography>
-      <Typography>{rutaImg}</Typography>
-    </Container>
+    <Box sx={{ margin: "10px" }}>
+      <FormControl sx={{ width: "50%" }}>
+        <InputLabel id="demo-simple-select-label">Análisis</InputLabel>
+        <Select
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          value={analisis}
+          label="Analisis"
+          onChange={cambiarAnalisis}
+        >
+          <MenuItem value={10}>Análisis 1</MenuItem>
+          <MenuItem value={20}>Análisis 2</MenuItem>
+        </Select>
+      </FormControl>
+      <EstructuraAnalisis mapa={mapa} pastel={pastel} nubePalabras={nubePalabras}></EstructuraAnalisis>
+    </Box>
   );
 }

@@ -32,11 +32,7 @@ export default function Rutas() {
   };
 
   return (
-    <Container
-      component="main"
-      
-      sx={{ minWidth: 120, marginTop: "20px"}}
-    >
+    <Container component="main" sx={{ minWidth: 120, marginTop: "20px"}}>
       <Grid container sx={{padding : "10px"}}>
         <FormControl sx={{width : "50%"}}>
           <InputLabel id="demo-simple-select-label">Rutas</InputLabel>

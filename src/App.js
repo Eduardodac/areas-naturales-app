@@ -10,6 +10,7 @@ import Rutas from './components/navegacion/Rutas';
 import theme from './theme/theme';
 import Bar from './components/navegacion/Bar';
 import EstructuraAnalisis from './components/navegacion/analisis/EstructuraAnalisis';
+import Botones from './components/modal/Botones';
 
 function App() {
   return ( 
@@ -20,6 +21,7 @@ function App() {
           <Grid container>
             <Routes>
               <Route path="/" element={<Inicio />} />
+              <Route path="/Modal" element={<Botones />} />
               <Route path="/Analisis" element={<Analisis />} />
               <Route path="/Galerias" element={<Galeria />} />
               <Route path="/Rutas" element={<Rutas />} />
